@@ -1,3 +1,8 @@
+New in NEXT
+-----------------------------
+
+- Created action: `Robocorp: Clear Robocorp (RCC) environments and restart Robocorp Code`.
+
 New in 0.27.1 (2022-02-04)
 -----------------------------
 

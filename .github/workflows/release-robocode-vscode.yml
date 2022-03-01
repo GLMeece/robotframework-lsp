@@ -46,6 +46,13 @@ jobs:
       with:
         name: robocorp-code.vsix
         path: ./robocorp-code/robocorp-code.vsix
+        
+    # Note: always publish a pre-release to VSCode marketplace.
+    - name: Publish pre-release to vscode marketplace
+      run: vsce publish -p $VSCE_TOKEN --pre-release
+      env:
+        VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+        
     - name: Check tag version
       run: python -m dev check-tag-version
 #     - name: Upload to PyPI
@@ -54,10 +61,12 @@ jobs:
 #       env:
 #         TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
 #         TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+
     - name: Publish to vscode marketplace 
       run: vsce publish -p $VSCE_TOKEN
       env:
         VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+        
     - name: Publish to open vsx marketplace 
       run: npx ovsx publish robocorp-code.vsix -p $OPEN_VSX_TOKEN
       env:

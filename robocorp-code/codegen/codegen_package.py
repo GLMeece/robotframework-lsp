@@ -41,7 +41,7 @@ def get_json_contents():
         "version": __version__,
         "icon": "images/icon.png",
         "publisher": "robocorp",
-        "engines": {"vscode": "^1.61.0"},
+        "engines": {"vscode": "^1.63.0"},
         "categories": ["Debuggers"],
         "activationEvents": get_activation_events_for_json()
         + views.get_activation_events_for_json()

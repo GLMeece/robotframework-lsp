@@ -330,12 +330,12 @@ def get_json_contents():
         "devDependencies": {
             "@types/mocha": "^2.2.32",
             "@types/node": "^13.0.00",
-            "@types/vscode": "1.61.0",
+            "@types/vscode": "1.63.0",
             "prettier": "2.4.1",
             "vscode-test": "1.5.1",
             "typescript": "^4.5.4",
         },
-        "engines": {"vscode": "^1.61.0"},
+        "engines": {"vscode": "^1.63.0"},
     }
     return base_package_contents
 
